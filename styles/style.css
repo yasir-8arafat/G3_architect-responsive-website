@@ -6,3 +6,91 @@
   font-weight: 400;
   font-style: normal;
 }
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+/* shared styles */
+.dis-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.dark-1{
+    color: #131313;
+}
+.all-stxt{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #727272;
+}
+.cmn-heading{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #131313;
+}
+.c-btn{
+    padding: 0.89rem 1.1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #FF900E;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 0.89rem;
+}
+.c-btn:hover{
+    background-color: aqua;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+/* header styles (navbar & banner design) */
+.head{
+    background-color: rgba(255, 144, 14, 0.1);
+}
+.navbar, .banner{
+    max-width: 75%;
+    margin: 0 auto;
+}
+/* nav bar  related style */
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item{
+
+}
+.nav-links{
+    gap: 2.7rem;
+}
+.nv-link{
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #424242;
+}
+/* banner part style start */
+.bann-text{
+    max-width: 38.33rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2.22rem;
+}
+.bann-text > h1{
+    font-size: 2.85rem;
+    font-weight: bold;
+    color: #131313;
+}
+.banner > img{
+    width: 100%;
+    border-radius: 8px;
+}
+/* responsive Meadia query */
+@media screen and (max-width:576px){
+    .navbar{
+        flex-direction: column;
+    }
+    .nav-links{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
