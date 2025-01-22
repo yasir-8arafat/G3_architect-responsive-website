@@ -13,7 +13,6 @@
 /* shared styles */
 .dis-flex{
     display: flex;
-    flex-wrap: wrap;
 }
 .dark-1{
     color: #131313;
@@ -41,6 +40,10 @@
     background-color: aqua;
     transition: 0.4s;
     cursor: pointer;
+}
+main{
+    max-width: 75%;
+    margin: 0 auto;
 }
 
 /* header styles (navbar & banner design) */
@@ -84,13 +87,56 @@
     width: 100%;
     border-radius: 8px;
 }
+/* main-section design start */
+main > section{
+    margin-bottom: 95px;
+    margin-top: 95px;
+}
+.feature{
+    align-items: center;
+    gap: 52px;
+}
+#s1{
+    font-weight: 500;
+    color: #727272;
+}
+#s2{
+    font-weight: bold;
+    color: rgba(255, 144, 14, 1);
+}
+.image{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 17px;
+}
+.image > img{
+    width: 244px;
+    height: 244px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
 /* responsive Meadia query */
 @media screen and (max-width:576px){
-    .navbar{
+    .navbar, .feature{
         flex-direction: column;
+    }
+    .feature{
+        flex-direction: column-reverse;
     }
     .nav-links{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr); 
     }
+    .navbar, .banner{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .image{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (min-width:556px) and (max-width:992px){
+    .feature{
+        flex-direction: column-reverse;
+    }   
 }
